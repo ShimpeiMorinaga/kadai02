@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>賃貸・購入比較</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="headline0">
+          <div class="headline1">TK</div>
+          <div class="headline2">賃貸・購入比較</div>
+        </div>
+        <div class="headline3">
+          <div class="headline">ABOUT</div>
+          <div class="headline">SERVICE</div>
+          <div class="headline">CONTACT</div>
+        </div>
+     </header>
+    <main>
+<!-- サービス紹介部分 -->
+        <div style="display: flex; justify-content: center;">
+            <img src="./img/ヘッダー画像②.jpg" alt="ヘッダー画像" style="width: 100%; height: auto;">
+        </div>
+        <div>
+            <h1 id="about" style="display: flex; justify-content: center; font-size: 1.5rem;">ABOUT</h1>
+            <p style="display: flex; justify-content: center;">賃貸と購入どちらがいいか悩むことありませんか？</p>
+            <p style="display: flex; justify-content: center;">賃貸だと値下がりの心配しなくていい。</p>
+            <p style="display: flex; justify-content: center;">でも購入だとローン返済後には、夢のマイホーム</p>
+            <p style="display: flex; justify-content: center;">どっちがいいんだろう？………</p>
+        </div>
+        <div>
+            <div>
+                <img src="./img/アパート.jpg" alt="アパート">
+                <img src="" alt="戸建">
+            </div>
+            <img src="" alt="悩む男性">
+        </div>
+<!-- フォーム入力部分 -->
+        <div>
+            <h1 id="service">SERVICE</h1>
+            <p>そんなお悩みはもう大丈夫！</p>
+            <p>本サイトでは、あなたの「年齢」「性別」「家族の人数」から、</p>
+            <p>最新のアルゴリズムを利用して賃貸か購入どちらがいいかを診断します。</p>
+            <p>ご関心のある方は以下のフォームに必要事項を入力し、「診断」ボタンをクリック！</p>
+        </div>
+        <form onsubmit="return getDataFromForm()">
+            <div style="display: flex; align-items: center;">
+                <span>年齢:</span>
+                <input type="number" name="age" pattern="\d*" inputmode="numeric" min="0">
+            </div>
+            <div style="display: flex; align-items: center;">
+                <span>性別:</span>
+                <div>
+                    <input type="radio" id="option1" name="gender" value="男性">
+                    <label for="option1">男性</label>
+                    <input type="radio" id="option2" name="gender" value="女性">
+                    <label for="option2">女性</label>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <span>家族人数:</span>
+                <input type="number" name="family" pattern="\d*" inputmode="numeric" min="1" max="10">
+            </div>
+            <button type="submit">送信</button>
+        </form>
+<!-- モーダルウインドウ部分 -->
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <!-- <div id="remaining-years"></div> -->
+                <div id="floor-area"></div>
+                <div id="residence"></div>
+                <!-- <div id="rent"></div> -->
+                <div id="lifetimeRent"></div>
+                <div id="purchase"></div>
+                <div id="result"></div>
+            </div>
+        </div>
+
+ <!-- コンタクト部分 -->
+        <div>
+            <div id="contact">CONTACT</div>
+
+
+        </div>
+        
+        
+
+    </main>
+
+    
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="java.js"></script>
+</body>
+</html>
